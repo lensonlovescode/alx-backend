@@ -5,6 +5,7 @@ Babel instanciation of a flask app
 from flask import Flask, render_template
 from flask_babel import Babel
 
+
 class Config():
     """
     A config class to define the languages supported or sum
@@ -13,9 +14,11 @@ class Config():
     BABEL_DEFAULT_TIMEZONE = ["UTC"]
     BABEL_DEFAULT_LOCALE = 'en'
 
+
 app = Flask(__name__)
 app.config.from_object(Config)
 babel = Babel(app)
+
 
 @app.route('/')
 def hello() -> str:
