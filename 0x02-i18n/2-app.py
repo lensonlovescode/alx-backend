@@ -25,7 +25,7 @@ def get_locale():
     """
     Get locale function to fetch supported languages
     """
-    return request.accepted_languages.best_match(Config.LANGUAGES)
+    return request.accepted_languages.best_match(app.config["LANGUAGES"])
 
 
 @app.route('/')
