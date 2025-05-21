@@ -33,7 +33,7 @@ def hello() -> str:
     """
     Renders the hello world template
     """
-    return render_template("2-index.html",)
+    return render_template("3-index.html",)
 
 
 if __name__ == "__main__":
