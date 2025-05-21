@@ -11,7 +11,7 @@ class Config():
     A config class to define the languages supported or sum
     """
     LANGUAGES = ["en", "fr"]
-    BABEL_DEFAULT_TIMEZONE = ["UTC"]
+    BABEL_DEFAULT_TIMEZONE = "UTC"
     BABEL_DEFAULT_LOCALE = 'en'
 
 
