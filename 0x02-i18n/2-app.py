@@ -11,7 +11,7 @@ class Config():
     A config class to define the languages supported or sum
     """
     LANGUAGES = ["en", "fr"]
-    BABEL_DEFAULT_TIMEZONE = ["UTC"]
+    BABEL_DEFAULT_TIMEZONE = "UTC"
     BABEL_DEFAULT_LOCALE = 'en'
 
 
@@ -20,7 +20,7 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
-@babel.locale_selector
+@babel.localeselector
 def get_locale():
     """
     Get locale function to fetch supported languages
