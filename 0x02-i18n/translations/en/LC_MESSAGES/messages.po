@@ -1,12 +1,14 @@
-msgid "Welcome to ALX"
-msgstr "Welcome to ALX"
-
-msgid "Hello world!"
+# English translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
 msgstr ""
-"Hello world!Project-Id-Version: PROJECT VERSION\n"
+"Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-21 10:50+0300\n"
-"PO-Revision-Date: 2025-05-21 10:54+0300\n"
+"POT-Creation-Date: 2025-05-23 11:32+0300\n"
+"PO-Revision-Date: 2025-05-23 11:32+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
@@ -15,3 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
+
+#: templates/3-index.html:4
+msgid "home_title"
+msgstr "Welcome to ALX"
+
+#: templates/3-index.html:7
+msgid "home_header"
+msgstr "Hello world!"
+
