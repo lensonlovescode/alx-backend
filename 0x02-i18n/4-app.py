@@ -19,22 +19,24 @@ app = Flask(__name__)
 app.config.from_object(Config)
 app.url_map.strict_slashes = False
 
+babel = Babel(app)
 
 
+@babel.localeselector
 def get_locale():
     """
     Get locale function to fetch supported languages
     """
-    return request.accept_languages.best_match(app.config["LANGUAGES"])
+    return request.args.get('lang') or request.accept_languages.best_match(
+           app.config["LANGUAGES"])
 
-babel = Babel(app, locale_selector=get_locale)
 
 @app.route('/')
 def hello() -> str:
     """
     Renders the hello world template
     """
-    return render_template("3-index.html",)
+    return render_template("4-index.html",)
 
 
 if __name__ == "__main__":
