@@ -14,6 +14,7 @@ class Config():
     BABEL_DEFAULT_TIMEZONE = "UTC"
     BABEL_DEFAULT_LOCALE = 'en'
 
+
 users = {
     1: {"name": "Balou", "locale": "fr", "timezone": "Europe/Paris"},
     2: {"name": "Beyonce", "locale": "en", "timezone": "US/Central"},
@@ -24,7 +25,6 @@ users = {
 app = Flask(__name__)
 app.config.from_object(Config)
 app.url_map.strict_slashes = False
-
 
 
 def get_locale():
@@ -40,14 +40,16 @@ def get_locale():
 
 babel = Babel(app, locale_selector=get_locale)
 
+
 def get_user():
     """
     gets the user to login as
     """
     uuid = request.args.get('login_as')
     if uuid:
-        return users.get(uuid)
+        return users.get(int(uuid))
     return None
+
 
 @app.before_request
 def before_request():
@@ -66,6 +68,7 @@ def hello() -> str:
         return render_template("5-index.html", username=g.user["name"])
 
     return render_template("5-index.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
